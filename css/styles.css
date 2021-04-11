@@ -6,13 +6,14 @@
   --header-logo-text-color: #000000;
   --footer-contacts-text-color: rgba(255, 255, 255, 0.6);
 
-  --main-background-color: #e5e5e5;
   --dark-background-color: #2f303a;
   --alt-background-color: #f5f4fa;
 
   --main-font: "Roboto", sans-serif;
   --logo-font: "Raleway", sans-serif;
 }
+
+/* General */
 
 body {
   font-family: var(--main-font);
@@ -21,11 +22,25 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  background-color: var(--main-background-color);
+  background-color: var(--alt-text-color);
 }
 
-.header {
-  background-color: var(--alt-text-color);
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-text-color);
+}
+
+.link.current {
+  color: var(--accent-text-color);
+}
+
+ul {
+  list-style: none;
 }
 
 .logo {
@@ -36,44 +51,49 @@ body {
   color: var(--accent-text-color);
   text-decoration: none;
 }
-.logo-header-color {
-  color: var(--header-logo-text-color);
-}
-.logo-footer-color {
-  color: var(--alt-text-color);
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 0.85;
+  text-align: center;
+  color: var(--title-text-color);
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-}
-.link:hover,
-.link:focus {
-  color: var(--accent-text-color);
+/* Hidden */
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
-.link.current {
-  color: var(--accent-text-color);
-}
+/* Header section */
 
-.list {
-  list-style: none;
-}
-
-.navigation {
+.header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.logo-header-color {
+  color: var(--header-logo-text-color);
+}
+
+.navigation {
   color: var(--title-text-color);
 }
 
 .header-contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
+
+/* Hero section */
 
 .hero-section {
   background-color: var(--dark-background-color);
@@ -104,6 +124,8 @@ body {
   cursor: pointer;
 }
 
+/* Button section */
+
 .button {
   font-weight: 500;
   font-size: 16px;
@@ -120,6 +142,8 @@ body {
   background-color: var(--accent-text-color);
 }
 
+/* Advantages section */
+
 .advantages-title {
   font-weight: 700;
   font-size: 14px;
@@ -128,30 +152,24 @@ body {
   color: var(--title-text-color);
 }
 
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 0.85;
-  text-align: center;
-  color: var(--title-text-color);
-}
+/* Team section */
 
-.team-background {
+.team {
   background-color: var(--alt-background-color);
+  font-size: 16px;
+  line-height: 1.19px;
 }
 .team-title {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
   text-align: center;
   color: var(--title-text-color);
 }
 
 .team-profession {
-  font-size: 16px;
-  line-height: 1.19px;
   text-align: center;
 }
+
+/* Project section */
 
 .project-title {
   font-weight: 700;
@@ -166,19 +184,14 @@ body {
   line-height: 1.87;
 }
 
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
+/*Footer section*/
 
 .footer {
   background-color: var(--dark-background-color);
+  color: var(--alt-text-color);
+}
+
+.logo-footer-color {
   color: var(--alt-text-color);
 }
 
